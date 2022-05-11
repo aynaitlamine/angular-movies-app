@@ -4,32 +4,7 @@ h1 {
     margin-top: 50px;
 }
 
-.nav-tabs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-    border: none;
-}
 
-.nav-link {
-
-    padding: 1px 15px;
-    border: none;
-    color: #fff;
-    transition: all 0.6s ease-in-out;
-}
-
-.nav-tabs .active {
-    background: #0d3354;
-    border-radius: 30px;
-    color: #fff;
-}
-
-.nav-link:hover {
-    background: #0b355a;
-    border-radius: 30px;
-}
 .scroller {
     height: 285px;
     overflow-y: hidden;
@@ -51,6 +26,9 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
+
 
 
 .scroller::-webkit-scrollbar {
