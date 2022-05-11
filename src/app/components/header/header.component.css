@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #042036;
+    height: 64px;
+    width: 100%;
+    z-index: 10;
+    transition: top .2s linear;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    padding: .5rem 1rem;
+}
