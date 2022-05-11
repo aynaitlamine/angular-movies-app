@@ -1,6 +1,5 @@
 <h1>Popular movies</h1>
 
-
 <div class="scroller">
-    <app-scroll-item></app-scroll-item>
+  <app-scroll-item *ngFor="let item of movies" [item]="item"></app-scroll-item>
 </div>

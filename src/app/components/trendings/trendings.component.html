@@ -1,10 +1,25 @@
 <h1>Trending</h1>
 <ul ngbNav #nav="ngbNav" class="nav-tabs">
-    <li ngbNavItem><a ngbNavLink href="#" class="nav-link" (click)="getTrendingMoviesToday()">Today</a></li>
-    <li ngbNavItem><a ngbNavLink href="#" class="nav-link" (click)="getTrendingMoviesThisWeek()">This week</a></li>
+  <li ngbNavItem>
+    <a ngbNavLink href="#" class="nav-link" (click)="getTrendingMoviesToday()"
+      >Today</a
+    >
+  </li>
+  <li ngbNavItem>
+    <a
+      ngbNavLink
+      href="#"
+      class="nav-link"
+      (click)="getTrendingMoviesThisWeek()"
+      >This week</a
+    >
+  </li>
 </ul>
 <div class="tab-content">
-    <div class="scroller">
-        <app-scroll-item *ngFor="let trending of trendings" [trending]="trending"></app-scroll-item>
-    </div>
+  <div class="scroller">
+    <app-scroll-item
+      *ngFor="let trending of trendings"
+      [item]="trending"
+    ></app-scroll-item>
+  </div>
 </div>

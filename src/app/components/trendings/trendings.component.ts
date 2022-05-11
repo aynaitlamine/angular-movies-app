@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiData } from 'src/app/model/ApiData';
-import { TrendingService } from 'src/app/services/trending.service';
+import { TrendingService } from 'src/app/services/trending/trending.service';
 
 @Component({
   selector: 'app-trendings',

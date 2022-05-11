@@ -9,7 +9,6 @@ import { ApiData } from 'src/app/model/ApiData';
 })
 export class TrendingService {
   constructor(private http: HttpClient) {}
-
   getTrendings(mediaType: string, timeWindow: string): Observable<ApiData> {
     return this.http.get<ApiData>(
       `${environment.ApiURL}/trending/${mediaType}/${timeWindow}?api_key=${environment.ApiKey}`

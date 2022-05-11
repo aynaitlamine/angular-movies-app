@@ -7,6 +7,12 @@ import { ApiData } from 'src/app/model/ApiData';
 @Injectable({
   providedIn: 'root',
 })
-export class PopularService {
-  constructor() {}
+export class TvService {
+  constructor(private http: HttpClient) {}
+
+  getPopular(): Observable<ApiData> {
+    return this.http.get<ApiData>(
+      `${environment.ApiURL}/tv/popular?api_key=${environment.ApiKey}&language=en-US&page=1`
+    );
+  }
 }
