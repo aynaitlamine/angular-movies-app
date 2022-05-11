@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +15,18 @@ import { PopularMoviesComponent } from './components/popular-movies/popular-movi
 import { PopularTvShowsComponent } from './components/popular-tv-shows/popular-tv-shows.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SearchComponent, HomeComponent, TrendingsComponent, CardComponent, ScrollItemComponent, PopularMoviesComponent, PopularTvShowsComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    SearchComponent,
+    HomeComponent,
+    TrendingsComponent,
+    CardComponent,
+    ScrollItemComponent,
+    PopularMoviesComponent,
+    PopularTvShowsComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

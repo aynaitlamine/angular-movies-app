@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-scroll-item',
   templateUrl: './scroll-item.component.html',
-  styleUrls: ['./scroll-item.component.css']
+  styleUrls: ['./scroll-item.component.css'],
 })
 export class ScrollItemComponent implements OnInit {
+  @Input() trending: any;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
