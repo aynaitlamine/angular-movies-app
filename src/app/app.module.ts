@@ -12,6 +12,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { TrendingsComponent } from './components/trendings/trendings.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { PopularComponent } from './components/popular/popular.component';
+import { TvShowComponent } from './pages/tv-show/tv-show.component';
+import { PeopleComponent } from './pages/people/people.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { PopularComponent } from './components/popular/popular.component';
     TrendingsComponent,
     MoviesComponent,
     PopularComponent,
+    TvShowComponent,
+    PeopleComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,78 @@
+.person-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-top: 330px;
+}
+
+.person-container .person {
+    width: 200px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.person-container .person.porn {
+    position: relative;
+}
+
+.person-container .person.porn::before {
+    content: "pornography";
+    position: absolute;
+    top: -2px;
+    z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    background: red;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.person-container .person.porn img {
+    filter: blur(3px) grayscale(1);
+}
+
+.person-container .person img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    min-height: 275px;
+}
+
+.wellcome-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 64px;
+    min-height: 300px;
+    max-height: 300px;
+    z-index: 999;
+}
+
+.wellcome-wrapper .main-person-container {
+    margin-left: 50px;
+}
+
+.wellcome-wrapper .main-person-container li {
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.wellcome-wrapper .main-person-container li:hover {
+    color: #097ede;
+    transform: scale(1.05);
+}
+
+.wellcome-wrapper .main-person-container li .porn {
+    color: red;
+}
+
+.wellcome-wrapper .main-person-container li .blur {
+    filter: blur(5px);
+}

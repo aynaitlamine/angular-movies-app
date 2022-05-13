@@ -28,21 +28,21 @@
           id="search"
           class="search"
           (input)="search(searchBox.value)"
-          placeholder="Search for a movie.."
+          placeholder="Search for a tv shows.."
         />
         <input
           type="text"
-          #searchBoxMovie
+          #searchBoxTvShow
           id="search"
           class="search"
-          (input)="getMoviesKeywords(searchBoxMovie.value)"
-          placeholder="Filter movies by keywords.."
+          (input)="getTvShowsKeywords(searchBoxTvShow.value)"
+          placeholder="Filter tv shows by keywords.."
         />
         <ul class="keywords">
           <li
-            *ngFor="let keyword of moviesKeywords"
+            *ngFor="let keyword of tvShowsKeywords"
             (click)="onSelectedKeywords(keyword)"
-            (click)="discover('movie', 1)"
+            (click)="discover('tv', 1)"
           >
             {{ keyword.name }}
           </li>
@@ -53,7 +53,7 @@
             class="active"
             *ngFor="let keyword of selectedKeywords"
             (click)="onSelectedKeywords(keyword)"
-            (click)="discover('movie', 1)"
+            (click)="discover('tv', 1)"
           >
             {{ keyword.name }}
           </li>
@@ -63,20 +63,20 @@
   </div>
 </div>
 
-<main id="main" *ngIf="movies">
-  <ng-container *ngFor="let movie of movies">
-    <a href="#" class="card" (mouseover)="onMouseOver(movie)">
+<main id="main" *ngIf="tvShows">
+  <ng-container *ngFor="let tvShow of tvShows">
+    <a href="#" class="card" (mouseover)="onMouseOver(tvShow)">
       <img
-        src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"
-        *ngIf="movie.poster_path"
+        src="https://image.tmdb.org/t/p/w1280{{ tvShow.poster_path }}"
+        *ngIf="tvShow.poster_path"
       />
       <img
-        *ngIf="!movie.poster_path"
+        *ngIf="!tvShow.poster_path"
         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxIDE3LjJMNi44IDNIMTlDMjAuMSAzIDIxIDMuOSAyMSA1VjE3LjJNMjAuNyAyMkwxOS43IDIxSDVDMy45IDIxIDMgMjAuMSAzIDE5VjQuM0wyIDMuM0wzLjMgMkwyMiAyMC43TDIwLjcgMjJNMTYuOCAxOEwxMi45IDE0LjFMMTEgMTYuNUw4LjUgMTMuNUw1IDE4SDE2LjhaIiAvPjwvc3ZnPg=="
       />
       <div class="card-info">
         <div class="overview-trailer-buttons-wrapper">
-          <h4>{{ movie.title }}</h4>
+          <h4>{{ tvShow.original_name }}</h4>
 
           <p
             class="show-overview"
@@ -91,7 +91,7 @@
           [class.show]="showOverview.classList.contains('active')"
           (mouseleave)="showOverview.classList.remove('active')"
         >
-          <p>{{ movie.overview }}</p>
+          <p>{{ tvShow.overview }}</p>
         </div>
         <div class="rating">
           <svg
@@ -105,7 +105,7 @@
               d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
             ></path>
           </svg>
-          <span class="vote-average">{{ movie.vote_average }}</span>
+          <span class="vote-average">{{ tvShow.vote_average }}</span>
         </div>
       </div>
     </a>

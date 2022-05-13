@@ -15,4 +15,10 @@ export class TvService {
       `${environment.ApiURL}/tv/popular?api_key=${environment.ApiKey}&language=en-US&page=1`
     );
   }
+
+  getGenre(): Observable<ApiData> {
+    return this.http.get<ApiData>(
+      `${environment.ApiURL}/genre/tv/list?api_key=${environment.ApiKey}`
+    );
+  }
 }
