@@ -18,4 +18,6 @@ export interface ApiData {
       media_type: string;
     }
   ];
+
+  genres: [id: number, name: string];
 }

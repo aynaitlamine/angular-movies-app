@@ -14,4 +14,10 @@ export class MovieService {
       `${environment.ApiURL}/movie/popular?api_key=${environment.ApiKey}`
     );
   }
+
+  getGenre(): Observable<ApiData> {
+    return this.http.get<ApiData>(
+      `${environment.ApiURL}/genre/movie/list?api_key=${environment.ApiKey}`
+    );
+  }
 }

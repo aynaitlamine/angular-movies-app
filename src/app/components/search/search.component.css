@@ -11,6 +11,16 @@
     text-align: center;
 }
 
+.title h2 {
+    font-size: 70px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.title h3 {
+    font-weight: 300;
+
+}
 .content-wrapper .search {
     background-color: initial;
     color: #FFF;
