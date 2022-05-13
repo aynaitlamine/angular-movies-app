@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 40px;
+}
+
+.pagination-wrapper {
+    margin-top: 40px;
+}
+
+.pagination-wrapper ngb-pagination ::ng-deep ul>li:not(.active)>a {
+    background-color: #032541;
+    color: white;
+    border-color: #032541;
+}
+
+.pagination-wrapper ngb-pagination ::ng-deep ul>li.active>a {
+    background-color: #144166;
+    border-color: #144166;
+    border-radius: 5px;
+}

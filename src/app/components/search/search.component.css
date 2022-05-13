@@ -1,14 +1,5 @@
 .welcome-wrapper {
-    position: relative;
-    min-height: 340px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
+    
     background-image: linear-gradient(rgba(3, 37, 65, .92), rgba(3, 37, 65, .85)),
         url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/7VrRna8S3x6xbijooeBmxqvHXiu.jpg");
     transition: background-image .2s ease-in-out;
@@ -18,17 +9,6 @@
 
     width: 50%;
     text-align: center;
-}
-
-.title h2 {
-    font-size: 70px;
-    font-weight: 500;
-    font-family: sans-serif;
-}
-
-.title h3 {
-    font-weight: lighter;
-
 }
 
 .content-wrapper .search {

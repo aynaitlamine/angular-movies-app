@@ -1,0 +1,49 @@
+<h1>Popular Movies</h1>
+
+<div class="scroller" *ngIf="popularMovies">
+    <ng-container *ngFor="let popular of popularMovies">
+        <a class="scroll-item" href="/details/movie/752623"><img
+                src="https://image.tmdb.org/t/p/w1280{{ popular.poster_path }}" />
+            <!---->
+            <p class="title">
+                {{ popular.title }}
+            </p>
+            <p>
+                {{ popular.release_date }}
+            </p>
+            <div class="rating">
+                <svg viewBox="0 0 24 24" style="width: 26px; height: 26px">
+                    <path fill="yellow"
+                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
+                    </path>
+                </svg><span class="vote-average">{{ popular.vote_average }}</span>
+            </div>
+        </a>
+    </ng-container>
+</div>
+
+
+
+<h1>Popular TV shows</h1>
+<div class="scroller" *ngIf="popularTvShows">
+    <ng-container *ngFor="let popular of 
+          popularTvShows">
+        <a class="scroll-item" href="/details/movie/752623"><img
+                src="https://image.tmdb.org/t/p/w1280{{ popular.poster_path }}" />
+            <!---->
+            <p class="title">
+                {{ popular.original_name }}
+            </p>
+            <p>
+                {{ popular.first_air_date }}
+            </p>
+            <div class="rating">
+                <svg viewBox="0 0 24 24" style="width: 26px; height: 26px">
+                    <path fill="yellow"
+                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
+                    </path>
+                </svg><span class="vote-average">{{ popular.vote_average }}</span>
+            </div>
+        </a>
+    </ng-container>
+</div>
