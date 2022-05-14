@@ -8,6 +8,19 @@ main {
     padding-top: 40px;
 }
 
+.welcome-wrapper {
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    transition: background-image .2s ease-in-out;
+}
 .pagination-wrapper {
     margin-top: 40px;
 }

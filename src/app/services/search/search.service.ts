@@ -43,4 +43,10 @@ export class SearchService {
       `${environment.ApiURL}/search/tv?api_key=${environment.ApiKey}&language=en-US&include_adult=false&page=${page}&query=${query}`
     );
   }
+
+  searchPeople(query: string, page: number): Observable<ApiData> {
+    return this.http.get<ApiData>(
+      `${environment.ApiURL}/search/person?api_key=${environment.ApiKey}&language=en-US&include_adult=false&page=${page}&query=${query}`
+    );
+  }
 }

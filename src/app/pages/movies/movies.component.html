@@ -1,14 +1,5 @@
-<div
-  class="welcome-wrapper"
-  [ngStyle]="{
-    'background-image':
-      backgroundImage != ''
-        ? 'linear-gradient(rgb(3 37 65 / 92%), rgb(3 37 65 / 85%)),url(https://image.tmdb.org/t/p/w1280' +
-          backgroundImage +
-          ')'
-        : ''
-  }"
->
+<div class="welcome-wrapper"
+    [ngStyle]="{'background-image': 'linear-gradient(rgb(3 37 65 / 92%), rgb(3 37 65 / 85%)),url(https://image.tmdb.org/t/p/w1280'+backgroundImage+')'}">
   <div class="content-wrapper">
     <div class="title">
       <div class="filter">
