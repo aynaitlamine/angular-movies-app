@@ -14,6 +14,16 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { PopularComponent } from './components/popular/popular.component';
 import { TvShowComponent } from './pages/tv-show/tv-show.component';
 import { PeopleComponent } from './pages/people/people.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'movies', component: MoviesComponent },
+  { path: 'tv', component: TvShowComponent },
+  { path: 'people', component: PeopleComponent },
+  { path: 'details/movie/:id', component: MovieDetailsComponent },
+];
 
 @NgModule({
   declarations: [
@@ -26,6 +36,7 @@ import { PeopleComponent } from './pages/people/people.component';
     PopularComponent,
     TvShowComponent,
     PeopleComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +44,7 @@ import { PeopleComponent } from './pages/people/people.component';
     NgbModule,
     NgbPaginationModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
   ],
   providers: [],
   bootstrap: [AppComponent],

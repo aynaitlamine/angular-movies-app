@@ -56,7 +56,7 @@
 
 <main id="main" *ngIf="movies">
   <ng-container *ngFor="let movie of movies">
-    <a href="#" class="card" (mouseover)="onMouseOver(movie)">
+    <a [routerLink]="['/details/movie/', movie.id]" class="card" (mouseover)="onMouseOver(movie)">
       <img
         src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"
         *ngIf="movie.poster_path"
