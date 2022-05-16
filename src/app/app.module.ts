@@ -15,14 +15,20 @@ import { PopularComponent } from './components/popular/popular.component';
 import { TvShowComponent } from './pages/tv-show/tv-show.component';
 import { PeopleComponent } from './pages/people/people.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { SearchCardComponent } from './components/search-card/search-card.component';
+import { TrendingItemComponent } from './components/trending-item/trending-item.component';
+import { PopularItemComponent } from './components/popular-item/popular-item.component';
+import { DetailsInfoComponent } from './components/details-info/details-info.component';
+import { DetailsSeasonsComponent } from './components/details-seasons/details-seasons.component';
+import { DetailsCastsComponent } from './components/details-casts/details-casts.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'tv', component: TvShowComponent },
   { path: 'people', component: PeopleComponent },
-  { path: 'details/movie/:id', component: MovieDetailsComponent },
+  { path: 'details/:type/:id', component: DetailsComponent },
 ];
 
 @NgModule({
@@ -36,7 +42,13 @@ const appRoutes: Routes = [
     PopularComponent,
     TvShowComponent,
     PeopleComponent,
-    MovieDetailsComponent,
+    SearchCardComponent,
+    TrendingItemComponent,
+    PopularItemComponent,
+    DetailsInfoComponent,
+    DetailsSeasonsComponent,
+    DetailsCastsComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

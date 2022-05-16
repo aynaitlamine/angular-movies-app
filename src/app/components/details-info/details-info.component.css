@@ -1,0 +1,169 @@
+.details-info {
+    padding: 0 40px;
+    color: white;
+}
+
+.details-info .facts {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+
+
+.details-info .facts .certification {
+    display: inline-flex;
+    white-space: nowrap;
+    align-items: center;
+    align-content: center;
+    padding: 3px;
+    border: 1px solid white;
+    color: white;
+    line-height: 1;
+    border-radius: 2px;
+    margin-right: 7px;
+}
+
+
+
+.details-info .facts .release {
+    margin-right: 7px;
+}
+
+.details-info .facts .genres {
+    margin-right: 7px;
+}
+
+.details-info .facts .genres::before {
+    content: "\2022";
+}
+
+.details-info .facts .genres::after {
+    content: "\2022";
+}
+
+.details-info .facts .lists-wrapper {
+    margin-left: 20px;
+}
+
+.details-info .facts .lists-wrapper img {
+    cursor: pointer;
+}
+
+
+
+.details-info .play-trailer {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 90px;
+    right: 10%;
+    cursor: pointer;
+}
+
+.details-info .play-trailer img {
+    height: 40px;
+    filter: invert(1);
+    background: #f5743a;
+    border-radius: 50%;
+    padding: 5px;
+    animation: shadowAnimation 1.5s infinite;
+}
+
+.details-info .details-title {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.details-info .details-title:hover {
+    color: #005296;
+}
+
+.details-info .company {
+    display: inline-block;
+}
+
+.details-info .company img {
+    height: 60px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.details-info .rating-wrapper {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.details-info .rating-wrapper .rating {
+    display: flex;
+    align-items: center;
+}
+
+.details-info .rating-wrapper .rating .vote-average {
+    font-size: 24px;
+}
+
+.details-info .rating-wrapper .rating .vote-average.green {
+    color: lime;
+}
+
+.details-info .rating-wrapper .rating .vote-average.orange {
+    color: orange;
+}
+
+.details-info .rating-wrapper .rating .vote-average.red {
+    color: red;
+}
+
+.details-info .rating-wrapper .rating svg {
+    fill: yellow;
+}
+
+.details-info .rating-wrapper .rating .max,
+.details-info .rating-wrapper .rating .vote_count {
+    margin-right: 5px;
+    font-size: 13px;
+    color: #7a7b7f;
+    margin-top: 6px;
+}
+
+.details-info .rating-wrapper .rating .vote_count {
+    color: #919295;
+}
+
+.details-info .keywords {
+    width: 65%;
+}
+
+@media (max-width: 768px) {
+    .details-info .keywords {
+        width: 100%;
+    }
+}
+
+.details-info .keywords li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    background: #09497b 7a;
+    margin-right: 5px;
+}
+
+.overview {
+    width: 90%;
+}
+
+@media (max-width: 768px) {
+    .overview {
+        width: 100%;
+    }
+}

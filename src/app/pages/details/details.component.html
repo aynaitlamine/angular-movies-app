@@ -1,0 +1,27 @@
+<div class="details-wrapper" *ngIf="movie"
+    style="background-image: linear-gradient(rgb(3,37,65), rgb(3 37 65 / 85%)),url(https://image.tmdb.org/t/p/w1280{{movie.backdrop_path}});">
+
+    <div class="main">
+        <div class="poster-image">
+            <img src="https://image.tmdb.org/t/p/w1280/{{movie.poster_path}}" alt="">
+            <img *ngIf="!movie.poster_path"
+                src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg"
+                alt="">
+        </div>
+
+        <app-details-info></app-details-info>
+    </div>
+
+    <app-details-seasons></app-details-seasons>
+    <app-details-casts></app-details-casts>
+
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <!--<app-video-slider [movieId]="movieId" [mediaType]="mediaType"></app-video-slider>-->
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="details-info">
+    <a class="details-title" href="{{movie.homepage}}" target="_blank">{{movie.title ? movie.title:
+        movie.original_name}}
+        <span>{{movie.release_date ? movie.release_date : movie.first_air_date }}</span>
+    </a>
+
+    <div class="rating-wrapper">
+        <div class="rating">
+            <svg style="width:26px;height:26px;" viewBox="0 0 24 24">
+                <path fill="yellow"
+                    d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+            </svg>
+            <span class="vote-average">{{movie.vote_average}}</span><span class="max">/10 </span>
+            <span class="vote_count"> ({{movie.vote_count}})</span>
+        </div>
+    </div>
+    <div class="facts">
+
+        <span class="release">
+            {{movie.release_date | date }} ({{movie.production_countries[0].iso_3166_1}})
+        </span>
+
+        <div class="genres">
+            <span *ngFor="let genre of movie.genres; let i = index"> {{genre.name}} <span
+                    *ngIf="i+1<movie.genres.length">,</span> </span>
+        </div>
+
+        <span class="runtime">
+            {{movie.runtime}} minutes
+        </span>
+
+        <div class="lists-wrapper">
+            <img src="/assets/images/favorite-white.svg" height="30px">
+            <!--<img src="/assets/images/favorite-red.svg" height="30px"> -->
+
+            <img src="/assets/images/bookmark-white.svg" height="30px">
+            <!--<img src="/assets/images/bookmark-red.svg" height="30px">-->
+        </div>
+
+    </div>
+
+
+    <div class="overview">
+        <h4>Overview</h4>
+        <p [innerText]="movie.overview"></p>
+    </div>
+
+    <div class="keywords" *ngIf="keywords">
+        <h4>Keywords</h4>
+        <li *ngFor="let keyword of keywords.keywords">{{keyword.name}}</li>
+    </div>
+    <p>Status: {{movie.status}}</p>
+
+
+    <div class="play-trailer">
+        <img src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-175-play-806cb05551791b8dedd7f8d38fd3bd806e2d397fcfeaa00a5cc9129f0819fd07.svg"
+            alt="">
+    </div>
+
+
+</div>
