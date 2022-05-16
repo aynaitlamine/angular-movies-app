@@ -65,7 +65,7 @@
 
 <main id="main" *ngIf="tvShows">
   <ng-container *ngFor="let tvShow of tvShows">
-    <a href="#" class="card" (mouseover)="onMouseOver(tvShow)">
+    <a [routerLink]="['/details/tv/', tvShow.id]" class="card" (mouseover)="onMouseOver(tvShow)">
       <img
         src="https://image.tmdb.org/t/p/w1280{{ tvShow.poster_path }}"
         *ngIf="tvShow.poster_path"

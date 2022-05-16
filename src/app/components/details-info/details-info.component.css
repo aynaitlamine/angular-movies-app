@@ -3,14 +3,14 @@
     color: white;
 }
 
-.details-info .facts {
+.facts {
     display: flex;
     margin-bottom: 40px;
 }
 
 
 
-.details-info .facts .certification {
+.facts .certification {
     display: inline-flex;
     white-space: nowrap;
     align-items: center;
@@ -25,33 +25,33 @@
 
 
 
-.details-info .facts .release {
+.facts .release {
     margin-right: 7px;
 }
 
-.details-info .facts .genres {
+.facts .genres {
     margin-right: 7px;
 }
 
-.details-info .facts .genres::before {
+.facts .genres::before {
     content: "\2022";
 }
 
-.details-info .facts .genres::after {
+.facts .genres::after {
     content: "\2022";
 }
 
-.details-info .facts .lists-wrapper {
+.facts .lists-wrapper {
     margin-left: 20px;
 }
 
-.details-info .facts .lists-wrapper img {
+.facts .lists-wrapper img {
     cursor: pointer;
 }
 
 
 
-.details-info .play-trailer {
+.play-trailer {
     display: inline-flex;
     align-items: center;
     position: absolute;
@@ -60,7 +60,7 @@
     cursor: pointer;
 }
 
-.details-info .play-trailer img {
+.play-trailer img {
     height: 40px;
     filter: invert(1);
     background: #f5743a;
@@ -69,83 +69,83 @@
     animation: shadowAnimation 1.5s infinite;
 }
 
-.details-info .details-title {
+.details-title {
     font-size: 30px;
     color: white;
     text-decoration: none;
     transition: all 0.5s;
 }
 
-.details-info .details-title:hover {
+.details-title:hover {
     color: #005296;
 }
 
-.details-info .company {
+.company {
     display: inline-block;
 }
 
-.details-info .company img {
+.company img {
     height: 60px;
     margin-right: 20px;
     margin-bottom: 10px;
 }
 
-.details-info .rating-wrapper {
+.rating-wrapper {
     display: inline-block;
     margin-left: 20px;
 }
 
-.details-info .rating-wrapper .rating {
+.rating-wrapper .rating {
     display: flex;
     align-items: center;
 }
 
-.details-info .rating-wrapper .rating .vote-average {
+.rating-wrapper .rating .vote-average {
     font-size: 24px;
 }
 
-.details-info .rating-wrapper .rating .vote-average.green {
+.rating-wrapper .rating .vote-average.green {
     color: lime;
 }
 
-.details-info .rating-wrapper .rating .vote-average.orange {
+.rating-wrapper .rating .vote-average.orange {
     color: orange;
 }
 
-.details-info .rating-wrapper .rating .vote-average.red {
+.rating-wrapper .rating .vote-average.red {
     color: red;
 }
 
-.details-info .rating-wrapper .rating svg {
+.rating-wrapper .rating svg {
     fill: yellow;
 }
 
-.details-info .rating-wrapper .rating .max,
-.details-info .rating-wrapper .rating .vote_count {
+.rating-wrapper .rating .max,
+.rating-wrapper .rating .vote_count {
     margin-right: 5px;
     font-size: 13px;
     color: #7a7b7f;
     margin-top: 6px;
 }
 
-.details-info .rating-wrapper .rating .vote_count {
+.rating-wrapper .rating .vote_count {
     color: #919295;
 }
 
-.details-info .keywords {
+.keywords {
     width: 65%;
 }
 
 @media (max-width: 768px) {
-    .details-info .keywords {
+    .keywords {
         width: 100%;
     }
 }
 
-.details-info .keywords li {
+.keywords li {
     cursor: pointer;
     display: inline-block;
-    padding: 8px 16px 10px 16px;
+    padding: 8px 16px 10px;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
@@ -154,7 +154,7 @@
     margin-bottom: 10px;
     transition: all 0.3s ease-in-out;
     border-radius: 4px;
-    background: #09497b 7a;
+    background: #09497b;
     margin-right: 5px;
 }
 

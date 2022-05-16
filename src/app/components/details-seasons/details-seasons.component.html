@@ -1,1 +1,10 @@
-<p>details-seasons works!</p>
+<div class="scroller" *ngIf="detail.seasons" style="margin: 15px auto;">
+    <a routerLink="/season/{{detail.id}}/{{season.season_number}}" *ngFor="let season of detail.seasons"
+        class="scroll-item">
+        <img src="https://image.tmdb.org/t/p/w1280{{season.poster_path}}" *ngIf="season.poster_path">
+        <div class="detail-info">
+            <p class="title">{{season.name}}</p>
+            <p>{{season.air_date | date}}</p>
+        </div>
+    </a>
+</div>

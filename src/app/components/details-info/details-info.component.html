@@ -1,7 +1,7 @@
 <div class="details-info">
-    <a class="details-title" href="{{movie.homepage}}" target="_blank">{{movie.title ? movie.title:
-        movie.original_name}}
-        <span>{{movie.release_date ? movie.release_date : movie.first_air_date }}</span>
+    <a class="details-title" href="{{detail.homepage}}" target="_blank">{{detail.title ? detail.title:
+        detail.original_name}}
+        <span>{{detail.release_date ? detail.release_date : detail.first_air_date }}</span>
     </a>
 
     <div class="rating-wrapper">
@@ -10,23 +10,23 @@
                 <path fill="yellow"
                     d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
             </svg>
-            <span class="vote-average">{{movie.vote_average}}</span><span class="max">/10 </span>
-            <span class="vote_count"> ({{movie.vote_count}})</span>
+            <span class="vote-average">{{detail.vote_average}}</span><span class="max">/10 </span>
+            <span class="vote_count"> ({{detail.vote_count}})</span>
         </div>
     </div>
     <div class="facts">
 
         <span class="release">
-            {{movie.release_date | date }} ({{movie.production_countries[0].iso_3166_1}})
+            {{detail.release_date ? detail.release_date : detail.first_air_date}})
         </span>
 
         <div class="genres">
-            <span *ngFor="let genre of movie.genres; let i = index"> {{genre.name}} <span
-                    *ngIf="i+1<movie.genres.length">,</span> </span>
+            <span *ngFor="let genre of detail.genres; let i = index"> {{genre.name}} <span *ngIf="i+1<detail.genres.length">,</span>
+            </span>
         </div>
 
         <span class="runtime">
-            {{movie.runtime}} minutes
+            {{detail.runtime}} minutes
         </span>
 
         <div class="lists-wrapper">
@@ -42,14 +42,14 @@
 
     <div class="overview">
         <h4>Overview</h4>
-        <p [innerText]="movie.overview"></p>
+        <p [innerText]="detail.overview"></p>
     </div>
 
     <div class="keywords" *ngIf="keywords">
         <h4>Keywords</h4>
-        <li *ngFor="let keyword of keywords.keywords">{{keyword.name}}</li>
+        <li *ngFor="let keyword of keywords.keywords" class="active">{{keyword.name}}</li>
     </div>
-    <p>Status: {{movie.status}}</p>
+    <p>Status: {{detail.status}}</p>
 
 
     <div class="play-trailer">

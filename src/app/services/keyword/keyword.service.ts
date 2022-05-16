@@ -15,4 +15,10 @@ export class KeywordService {
       `${environment.ApiURL}/search/keyword?api_key=${environment.ApiKey}&query=${query}`
     );
   }
+
+  getKeywordsByMediaType(mediaType: string, Id: number): Observable<ApiData> {
+    return this.http.get<ApiData>(
+      `${environment.ApiURL}/${mediaType}/${Id}/keywords?api_key=${environment.ApiKey}`
+    );
+  }
 }

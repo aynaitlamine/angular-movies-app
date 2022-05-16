@@ -22,6 +22,7 @@ import { DetailsInfoComponent } from './components/details-info/details-info.com
 import { DetailsSeasonsComponent } from './components/details-seasons/details-seasons.component';
 import { DetailsCastsComponent } from './components/details-casts/details-casts.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { DetailsSimilarComponent } from './components/details-similar/details-similar.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -49,6 +50,7 @@ const appRoutes: Routes = [
     DetailsSeasonsComponent,
     DetailsCastsComponent,
     DetailsComponent,
+    DetailsSimilarComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,7 @@ const appRoutes: Routes = [
     NgbModule,
     NgbPaginationModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent],
